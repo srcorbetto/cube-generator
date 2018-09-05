@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="floor" src="assets/img/tron-floor.png">
+                <img id="sky" src="assets/img/space.png">
+                <a-asset-item id="car-obj" src="assets/img/car.obj"></a-asset-item>
+                <a-asset-item id="car-mtl" src="assets/img/car.mtl"></a-asset-item>
+            </a-assets>
+            <a-sky repeat="10 10" src="#sky"></a-sky>
+            <a-plane repeat="50 50" src="#floor" width="100" height="100" rotation="-90 0 0"></a-plane>
+
+            <a-entity camera look-controls position="0 1.6 0">
+                <a-cursor color="cyan"></a-cursor>
+            </a-entity>
+
+            <a-obj-model src="#car-obj" mtl="#car-mtl"></a-obj-model>
+
+            <a-box color="blue" position="2 1 -4"></a-box>
+        </a-scene>
+    </body>
+</html>
